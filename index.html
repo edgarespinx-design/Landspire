@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="only light">
+<meta name="darkreader-lock">
 <style>:root{color-scheme:only light}</style>
 <title>Landspire — landing pages for dental and medical practices</title>
 <meta name="description" content="High-end, tailored landing pages for dental and healthcare practices that run Google Ads, built on CRO to raise the ROI of every ad dollar.">
@@ -159,7 +160,7 @@ footer a{transition:color .2s}footer a:hover{text-decoration:underline!important
 .bcase .barr{transition:transform .3s cubic-bezier(.2,.7,.2,1)}.bcase:hover .barr{transform:translateX(4px)}
 @media (max-width: 960px){.bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;grid-auto-rows:260px;grid-template-areas:"e e" "c a" "c d" "b f"}.b-e{min-height:320px}}
 @media (max-width: 1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-@media (max-width: 640px){.stag{grid-template-columns:1fr!important}.cards{grid-template-columns:1fr!important}.bento{grid-template-columns:1fr;grid-auto-rows:auto;grid-template-areas:"e" "c" "a" "d" "b" "f"}.bento>*{min-height:220px}.b-c{min-height:560px}}
+@media (max-width: 640px){.stag{grid-template-columns:1fr!important}.cards{grid-template-columns:1fr!important}.bento{grid-template-columns:1fr;grid-auto-rows:auto;grid-template-areas:"a" "b" "e" "c" "d" "f"}.bento>*{min-height:220px}.b-c{min-height:560px}}
 @keyframes blobdrift{0%,100%{translate:0 0}50%{translate:40px -30px}}
 .glass-blob{animation:blobdrift 12s ease-in-out infinite}.glass-blob.b2{animation-duration:15s;animation-direction:reverse}
 .g-mag{background:radial-gradient(50% 70% at -5% 105%,rgba(222,74,206,.6),transparent 65%),radial-gradient(38% 55% at 55% -5%,rgba(168,86,255,.45),transparent 65%),radial-gradient(45% 60% at 95% 10%,rgba(64,190,255,.45),transparent 65%),radial-gradient(55% 70% at 85% 100%,rgba(46,120,255,.6),transparent 65%),radial-gradient(60% 80% at 100% 55%,rgba(42,98,240,.75),transparent 65%),radial-gradient(45% 60% at 20% 0%,rgba(20,60,170,.6),transparent 70%),#0B2263!important;background-size:130% 130%,130% 130%,120% 120%,120% 120%,120% 120%,120% 120%,auto!important;background-position:0% 100%,50% 0%,100% 0%,100% 100%,100% 50%,0% 0%,0 0;animation:drift6 16s ease-in-out infinite}
@@ -217,6 +218,35 @@ footer a{transition:color .2s}footer a:hover{text-decoration:underline!important
 @media (max-width:1100px){.hero{padding-bottom:0!important}.hero-nav,.hero-right,.hero .chip{display:none!important}.hero-left{max-width:none!important}.hero h1{width:auto}.hero-p{width:auto}.hero-facts{right:16px!important;bottom:16px!important;width:120px!important;height:120px!important}.hero-blue{top:auto!important;width:100%!important;height:460px}.hero-img{left:50%!important;height:440px!important}.hero-space{display:block;height:460px}}
 @media (min-width:641px) and (max-width:1100px){.bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;grid-auto-rows:260px;grid-template-areas:"e e" "c a" "c d" "b f"}.b-e{min-height:320px}}
 @media (max-width:640px){#root{padding:12px!important;gap:12px!important}.hero{padding:20px 22px 0!important}#conversion{padding:36px 20px!important;gap:36px!important}#conversion .calc{padding:22px!important}#conversion .a-right>div:last-child{flex-wrap:wrap!important}#bump{top:14px!important;right:14px!important;font-size:12px!important;padding:5px 9px!important}#pricing{padding:20px 14px!important;gap:24px!important}#pricing [data-sr="e11"]{padding:24px 20px 26px!important}#pricing [data-sr="e11"]>span:nth-child(2)>span:nth-child(2){font-size:68px!important}#pricing .stag{padding-left:0!important}#sample{padding:24px 20px!important}#faq{padding:32px 20px!important}footer{padding:24px!important}}
+@media (max-width:640px){
+#conversion{gap:24px!important}
+#conversion .a-right{display:contents}
+#conversion .a-right>h2{order:0}
+#conversion .calc{order:1;gap:16px!important;padding:18px!important}
+#conversion .a-right>p,#conversion .a-right>div{order:2}
+#conversion .calc label{font-size:16px!important;line-height:22px!important}
+#conversion .calc>div:first-child{gap:8px!important}
+#conversion .calc>div:first-child span[style*="font-size: 52px"]{font-size:40px!important}
+#conversion .calc>div:nth-child(2){flex-wrap:nowrap!important;gap:10px!important}
+#conversion .calc>div:nth-child(2)>div{flex:1 1 0!important;min-width:0;padding:14px!important;gap:4px!important;border-radius:16px!important}
+#conversion .calc>div:nth-child(2) span[style*="font-size: 52px"]{font-size:38px!important}
+#conversion .calc>div:nth-child(2) span[style*="font-size: 14px"]{font-size:13px!important}
+#conversion .calc span[style*="margin-top: 14px"]{margin-top:8px!important}
+#bump{position:static!important;align-self:flex-start;margin-bottom:4px}
+#conversion .calc>p{font-size:14px!important;line-height:20px!important}
+#conversion.g-mag2{background:radial-gradient(80% 40% at 0% 100%,rgba(140,96,255,.6),transparent 70%),radial-gradient(80% 40% at 100% 0%,rgba(64,190,255,.5),transparent 70%),linear-gradient(45deg,#2A62F0 0%,#123A9E 30%,#0B2263 50%,#123A9E 70%,#2A62F0 100%)!important;background-size:130% 130%,130% 130%,100% 100%!important;background-position:0% 100%,100% 0%,0 0;animation:driftM 16s ease-in-out infinite}
+.how-card>span:last-child{max-width:260px}
+.pin-cards{gap:20px!important}
+.pin-cards .cards{grid-template-columns:1fr!important;gap:10px!important}
+.pin-cards .cards>div{flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:16px!important;padding:24px 20px!important;min-height:124px!important}
+.pin-cards .cards>div>div:first-child{flex:none}
+.pin-cards .cards>div>div:last-child{gap:4px!important}
+.pin-cards .cards>div>div:last-child>span:first-child{font-size:17px!important}
+.pin-cards .cards>div>div:last-child>span:last-child{font-size:14px!important;line-height:20px!important}
+.how-card{min-height:520px!important;justify-content:center!important;gap:36px!important;padding:40px 28px!important}
+#about.g-mag{background:radial-gradient(80% 40% at 0% 100%,rgba(222,74,206,.55),transparent 70%),radial-gradient(80% 40% at 100% 0%,rgba(64,190,255,.5),transparent 70%),linear-gradient(45deg,#2A62F0 0%,#123A9E 30%,#0B2263 50%,#123A9E 70%,#2A62F0 100%)!important;background-size:130% 130%,130% 130%,100% 100%!important;background-position:0% 100%,100% 0%,0 0;animation:driftM 16s ease-in-out infinite}
+@keyframes driftM{0%,100%{background-position:0% 100%,100% 0%,0 0}50%{background-position:20% 80%,80% 20%,0 0}}
+}
 </style>
 </head>
 <body>
@@ -334,7 +364,7 @@ footer a{transition:color .2s}footer a:hover{text-decoration:underline!important
 </div>
 <div class="bento">
 
-<a href="/samples/lark-linen-aesthetics/" data-sr="e4" class="b-a bcase wcard a-zoom t1" aria-label="View the Lark and Linen Aesthetics sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 28px 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+<a href="/samples/lark-linen/" target="_top" data-sr="e4" class="b-a bcase wcard a-zoom t1" aria-label="View the Lark and Linen Aesthetics sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 28px 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
 <span style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 17px; font-weight: 600; color: #5A6275">Botox &amp; skin</span><span style="font-size: 12px; font-weight: 700; color: #FFFFFF; background: #2A62F0; border-radius: 999px; padding: 6px 10px">Live sample</span></span>
 <span style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: clamp(28px, 2.6vw, 40px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Lark &amp; Linen Aesthetics</span><span style="font-size: 15px; line-height: 21px; color: #5A6275">Med spa page built around a new-client Botox offer.</span><span style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 650; color: #2A62F0">View live sample<svg class="barr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span>
 </a>
@@ -343,12 +373,12 @@ footer a{transition:color .2s}footer a:hover{text-decoration:underline!important
 
 <div data-sr="e6" class="b-c a-zoom t3" style="background: #DDE3EE"><img class="kb" src="img/bento-talk.jpg" alt="Smiling woman holding out a clear aligner" style="width: 100%; height: 100%; object-fit: cover; object-position: 36% 40%; display: block"></div>
 
-<a href="/samples/alder-pine-dental/" data-sr="e7" class="b-d bcase wcard a-zoom t4" aria-label="View the Alder and Pine Dental sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+<a href="/samples/alder-pine/" target="_top" data-sr="e7" class="b-d bcase wcard a-zoom t4" aria-label="View the Alder and Pine Dental sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
 <span style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 17px; font-weight: 600; color: #5A6275">Dental implants</span><span style="font-size: 12px; font-weight: 700; color: #FFFFFF; background: #2A62F0; border-radius: 999px; padding: 6px 10px">Live sample</span></span>
 <span style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: clamp(28px, 2.6vw, 40px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Alder &amp; Pine Dental</span><span style="font-size: 15px; line-height: 21px; color: #5A6275">Call button always in view, and the cost question answered before patients ask.</span><span style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 650; color: #2A62F0">View live sample<svg class="barr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span>
 </a>
 
-<a href="/samples/brightline-orthodontics/" data-sr="e8" class="b-e bcase wcard a-zoom t5" aria-label="View the Brightline Orthodontics sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+<a href="/samples/brightline/" target="_top" data-sr="e8" class="b-e bcase wcard a-zoom t5" aria-label="View the Brightline Orthodontics sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
 <span style="position: relative; display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 17px; font-weight: 600; color: #5A6275">Invisalign</span><span style="font-size: 12px; font-weight: 700; color: #FFFFFF; background: #2A62F0; border-radius: 999px; padding: 6px 10px">Live sample</span></span>
 <span style="position: relative; display: flex; flex-direction: column; gap: 10px"><span style="font-size: clamp(34px, 3.6vw, 54px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Brightline Orthodontics</span><span style="font-size: 16px; line-height: 24px; color: #5A6275">Seasonal offer page built around year-end benefits and a clear all-in price.</span><span style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 650; color: #2A62F0">View live sample<svg class="barr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span>
 </a>
@@ -363,7 +393,7 @@ footer a{transition:color .2s}footer a:hover{text-decoration:underline!important
 <h2 data-sr="e10" class="a-up" style="margin: 0 0 56px; text-align: center; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 300; color: #5A6275">How it works. <span style="font-weight: 650; color: #0B0F1A">Three steps to a page that converts.</span></h2>
 <div data-pin="how" style="position: relative; height: 2800px">
 <div style="position: sticky; top: 80px; height: 560px">
-<ol style="list-style: none; margin: 0; padding: 0; position: absolute; inset: 0">
+<ol style="list-style: none; margin: 0; padding: 0; position: absolute; inset: 5% 0 -5% 0">
 <li class="how-card" style="position: absolute; inset: 0; margin: auto; width: min(720px, 100%); height: fit-content; box-sizing: border-box; background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.6); -webkit-backdrop-filter: blur(24px) saturate(150%); backdrop-filter: blur(24px) saturate(150%); border-radius: 32px; padding: 52px 48px; box-shadow: 0 24px 60px rgba(14,42,120,.06), inset 0 1px 0 rgba(255,255,255,.7); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; opacity: 1.000; translate: 0 -0.0px; scale: 1.000; filter: blur(0.0px); pointer-events: auto; will-change: opacity, translate, filter" data-hw="0">
 <span style="display: flex; justify-content: center; align-items: center; gap: 24px"><span style="flex: none; width: 96px; height: 96px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 24px 60px rgba(42,98,240,.45), 0 0 0 14px rgba(42,98,240,.08)"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></span></span>
 <span style="display: flex; flex-direction: column; gap: 12px"><span style="font-size: clamp(28px, 3vw, 40px); line-height: 1.05; font-weight: 650; letter-spacing: -0.03em">Send us your page</span><span style="max-width: 540px; font-size: 19px; line-height: 29px; color: #5A6275">Share the page your Google Ads point to, or book a 15-minute call and walk us through it.</span></span>
@@ -497,7 +527,7 @@ function scrollToId(id){var el=document.getElementById(id);if(!el)return;var se=
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id||!document.getElementById(id))return;e.preventDefault();scrollToId(id);});
 var dropArr=document.getElementById('dropArr'),dropN=0;document.getElementById('goWork').addEventListener('click',function(){dropN++;dropArr.classList.remove('dropA','dropB');void dropArr.offsetWidth;dropArr.classList.add(dropN%2?'dropA':'dropB');});
 var fnav=document.getElementById('fnav'),navs=document.querySelectorAll('[data-nav]'),cards=document.querySelectorAll('[data-hw]'),pin=document.querySelector('[data-pin]');
-function hw(i,hp){var t=hp*3-i,a=Math.abs(t),f=Math.max(0,Math.min(1,(a-.3)/.22)),o=1-f;return{o:o.toFixed(3),y:(-t*60-Math.sign(t)*f*130).toFixed(1)+'px',s:(.94+.06*o-Math.min(a,.3)*.06).toFixed(3),b:((1-o)*10).toFixed(1)+'px',pe:o>.5?'auto':'none'};}
+function hw(i,hp){var m=window.innerWidth<=640?.72:1;var t=Math.min(3,hp*3/m)-i,a=Math.abs(t),f=Math.max(0,Math.min(1,(a-.3)/.22)),o=1-f;return{o:o.toFixed(3),y:(-t*60-Math.sign(t)*f*130).toFixed(1)+'px',s:(.94+.06*o-Math.min(a,.3)*.06).toFixed(3),b:((1-o)*10).toFixed(1)+'px',pe:o>.5?'auto':'none'};}
 var q=0;function upd(){q=0;var act='';['work','how','pricing','faq'].forEach(function(id){var el=document.getElementById(id==='work'?'work-s':id);if(el){var r=el.getBoundingClientRect();if(r.top<=160&&r.bottom>160)act=id;}});
 navs.forEach(function(n){n.classList.toggle('on',n.getAttribute('data-nav')===act);});
 var y=window.scrollY||document.documentElement.scrollTop;fnav.classList.toggle('on',y>500);
@@ -521,6 +551,14 @@ var t0=Date.now(),user=false;['wheel','touchstart','keydown','pointerdown'].forE
 function tick(){if(user||Date.now()-t0>6000)return;go();requestAnimationFrame(tick);}
 addEventListener('load',function(){if(!user){go();setTimeout(go,300);}setTimeout(function(){try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}},400);});
 if(document.readyState==='loading')addEventListener('DOMContentLoaded',tick);else tick();})();
+</script>
+<script>
+(function(){var de=document.documentElement;
+function scope(list){for(var i=0;i<list.length;i++){var r=list[i];if(!r.selectorText&&r.cssRules){scope(r.cssRules);continue;}if(r.selectorText&&r.selectorText.indexOf(':hover')>-1){r.selectorText=r.selectorText.split(',').map(function(s){return s.indexOf(':hover')>-1?'html:not(.nohover) '+s.trim():s;}).join(',');}}}
+for(var s=0;s<document.styleSheets.length;s++){try{scope(document.styleSheets[s].cssRules);}catch(e){}}
+var touch=window.matchMedia&&matchMedia('(hover: none)').matches;
+function set(){de.classList.toggle('nohover',touch||window.innerWidth<=1100);}
+set();window.addEventListener('resize',set);})();
 </script>
 </body>
 </html>
