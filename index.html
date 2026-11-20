@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landspire — landing pages for dental and medical practices</title>
+<meta name="description" content="High-end, tailored landing pages for dental and healthcare practices that run Google Ads, built on CRO to raise the ROI of every ad dollar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap">
+<style>
+html{scroll-behavior:auto}
+body{margin:0;background:#EEF2F9;font-family:"Manrope","Helvetica Neue",Arial,sans-serif;color:#0B0F1A;-webkit-font-smoothing:antialiased}
+a{color:#2A62F0}a:hover{color:#0E2A78}
+.num{color:transparent;-webkit-text-stroke:1.5px #B9C2D3}
+input::placeholder{color:#8A93A6}
+.rng{-webkit-appearance:none;appearance:none;width:100%;height:32px;margin:0;background:transparent;cursor:pointer}
+.rng:focus{outline:none}
+.arr{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+a:hover>.arr{transform:translate(2px,-2px)}
+@keyframes dropA{0%{translate:0 0;opacity:1}45%{translate:6px 22px;opacity:0}46%{translate:-6px -22px;opacity:0}100%{translate:0 0;opacity:1}}
+@keyframes dropB{0%{translate:0 0;opacity:1}45%{translate:6px 22px;opacity:0}46%{translate:-6px -22px;opacity:0}100%{translate:0 0;opacity:1}}
+.dropA{animation:dropA .55s cubic-bezier(.5,0,.2,1)}
+.dropB{animation:dropB .55s cubic-bezier(.5,0,.2,1)}
+@keyframes bumpA{0%{scale:1}40%{scale:1.18}100%{scale:1}}
+@keyframes bumpB{0%{scale:1}40%{scale:1.18}100%{scale:1}}
+.bumpA{animation:bumpA .45s cubic-bezier(.2,.8,.2,1.4)}
+.bumpB{animation:bumpB .45s cubic-bezier(.2,.8,.2,1.4)}
+.rng::-webkit-slider-runnable-track{height:10px;border-radius:999px;background:linear-gradient(90deg,#FFFFFF var(--p),rgba(255,255,255,.22) var(--p))}
+.rng::-webkit-slider-thumb{-webkit-appearance:none;box-sizing:border-box;width:30px;height:30px;margin-top:-10px;border-radius:999px;background:#FFFFFF;border:6px solid #0E2A78;box-shadow:0 8px 20px rgba(4,16,60,.45);transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s}
+.rng:hover::-webkit-slider-thumb,.rng:active::-webkit-slider-thumb{transform:scale(1.15)}
+.rng:focus-visible::-webkit-slider-thumb{box-shadow:0 8px 20px rgba(4,16,60,.45),0 0 0 7px rgba(255,255,255,.35)}
+.rng::-moz-range-track{height:10px;border-radius:999px;background:rgba(255,255,255,.22)}
+.rng::-moz-range-progress{height:10px;border-radius:999px;background:#FFFFFF}
+.rng::-moz-range-thumb{box-sizing:border-box;width:30px;height:30px;border-radius:999px;background:#FFFFFF;border:6px solid #0E2A78;box-shadow:0 8px 20px rgba(4,16,60,.45);transition:transform .2s cubic-bezier(.2,.7,.2,1)}
+.rng:hover::-moz-range-thumb,.rng:active::-moz-range-thumb{transform:scale(1.15)}
+.bar{transition:width .6s cubic-bezier(.2,.7,.2,1)}
+.calc{transition:transform .4s cubic-bezier(.2,.7,.2,1)}.calc:hover{transform:translateY(-4px)}
+h1,h2{text-wrap:balance}p,span,label{text-wrap:pretty}
+@keyframes up{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;scale:.85}to{opacity:1;scale:1}}
+@keyframes rise{from{opacity:0;translate:-50% 60px}to{opacity:1;translate:-50% 0}}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@keyframes pulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.55}50%{transform:translate(-50%,-50%) scale(1.07);opacity:.2}}
+@keyframes slide{from{clip-path:inset(0 0 0 100% round 32px)}to{clip-path:inset(0 0 0 0 round 32px)}}
+.reveal{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.fade{animation:fade 1.1s ease both}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}
+.hero-img{animation:rise 1.2s .45s cubic-bezier(.2,.7,.2,1) both}
+.chip{animation:pop .6s cubic-bezier(.2,.8,.2,1.2) both,bob 5s ease-in-out infinite}
+.c1{animation-delay:1.1s,1.7s}.c2{animation-delay:1.3s,2.5s}.c3{animation-delay:1.5s,3.3s}
+.ring{position:absolute;border-radius:999px;border:1px solid rgba(255,255,255,.3);pointer-events:none;transform:translate(-50%,-50%);animation:pulse 7s ease-in-out infinite}
+.ring2{animation-delay:-3.5s}
+.navp{transition:background-color .25s,color .25s}.navp:hover{background-color:#E3EBFE!important;color:#0B0F1A!important}
+.btn{transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s,border-color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn:not(.btn2):not(.btnw):hover{background-color:#1F52D6!important}
+.btnw:hover{background-color:#E3EBFE!important}
+.btn>span{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.btn:hover>span{transform:translateX(4px)}
+.stats>div{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.stats>div:hover{transform:translateY(-3px)}
+.cards>div{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,background-color .45s}
+.cards>div{position:relative;overflow:hidden;box-shadow:0 10px 24px rgba(42,98,240,.16)!important}
+.cards>div:hover{transform:translateY(-10px) scale(1.02);background-color:#0E2A78!important;box-shadow:0 18px 36px rgba(42,98,240,.26)!important}
+.cards>div>div:first-child>span:last-child{transition:transform .5s cubic-bezier(.2,.8,.2,1.3)}
+.cards>div:hover>div:first-child>span:last-child{transform:rotate(-12deg) scale(1.15)}
+.cards .num{transition:color .4s,-webkit-text-stroke-color .35s}
+.cards>div:hover .num{color:#FFFFFF}
+.num{transition:-webkit-text-stroke-color .35s}
+.cards>div:hover .num{-webkit-text-stroke-color:#2A62F0}
+.form input{transition:border-color .2s,box-shadow .2s,background-color .2s}
+.form input:focus{outline:none;border-color:#2A62F0!important;background-color:#FFFFFF!important;box-shadow:0 0 0 4px #E3EBFE}
+footer a{transition:color .2s}footer a:hover{text-decoration:underline!important}
+.sr-on .sr{opacity:0;translate:0 36px;transition:opacity 1.3s cubic-bezier(.2,.7,.2,1),translate 1.3s cubic-bezier(.2,.7,.2,1)}
+.sr-on .sr.in{opacity:1;translate:0 0}
+.sr-on #work-s.sr{translate:none}
+.sr-on .sr.s1{transition-delay:.12s}.sr-on .sr.s2{transition-delay:.24s}.sr-on .sr.s3{transition-delay:.36s}
+.hero-space{display:none}
+.float{animation:bob 6s ease-in-out infinite}
+.st-i{perspective:1000px}
+.st-i svg{transform:rotateX(20deg) rotateY(-20deg) rotateZ(3deg);filter:drop-shadow(1.5px 2px 0 #C9D5F0) drop-shadow(1.5px 2px 0 #C9D5F0) drop-shadow(1.5px 2px 0 #BACAEC) drop-shadow(1.5px 2px 0 #AFC1EA) drop-shadow(0 28px 26px rgba(14,42,120,.28));transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.st-row.rev .st-i svg{transform:rotateX(20deg) rotateY(20deg) rotateZ(-3deg)}
+.st-i svg > :not(text){filter:url(#clay3d)}
+.st-i:hover svg{transform:rotateX(8deg) rotateY(-8deg) rotateZ(1deg)}
+.st-row.rev .st-i:hover svg{transform:rotateX(8deg) rotateY(8deg) rotateZ(-1deg)}
+.st-list{position:relative;display:flex;flex-direction:column;gap:40px;padding:8px 0}
+.st-line,.st-fill{position:absolute;left:50%;top:0;bottom:0;width:2px;translate:-1px 0;border-radius:2px}
+.st-line{background:#DDE3EE}
+.st-fill{display:none;background:linear-gradient(#A9BFFF,#2A62F0);transform-origin:top}
+@keyframes stgrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@supports (animation-timeline: view()){.st-fill{display:block;animation:stgrow linear both;animation-timeline:view();animation-range:cover 15% cover 75%}}
+.st-row{--y:0px;position:relative;display:grid;grid-template-columns:1fr 64px 1fr;grid-template-areas:"t d i";column-gap:56px;align-items:center}
+.st-row.rev{grid-template-areas:"i d t"}
+.st-t{grid-area:t;justify-self:end;--x:-56px}.st-i{grid-area:i;--x:56px;height:320px!important}
+.st-row.rev .st-t{justify-self:start;--x:56px}.st-row.rev .st-i{--x:-56px}
+.st-d{grid-area:d;justify-self:center;position:relative;z-index:1;width:64px;height:64px;border-radius:999px;background:#FFFFFF;border:2px solid #DDE3EE;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#8A93A6;transition:background-color .7s,border-color .7s,color .7s,box-shadow .7s}
+.st-row.in .st-d{background:#2A62F0;border-color:#2A62F0;color:#FFFFFF;box-shadow:0 0 0 8px #E3EBFE}
+.sr-on .st-t,.sr-on .st-i{opacity:0;translate:var(--x) var(--y);filter:blur(10px);transition:opacity 1.3s cubic-bezier(.16,1,.3,1),translate 1.3s cubic-bezier(.16,1,.3,1),filter 1.3s cubic-bezier(.16,1,.3,1)}
+.sr-on .st-i{transition-delay:.18s}
+.sr-on .st-row.in .st-t,.sr-on .st-row.in .st-i{opacity:1;translate:0 0;filter:blur(0)}
+@keyframes drift{0%,100%{background-position:0% 0%,100% 100%,0 0}50%{background-position:35% 25%,65% 75%,0 0}}
+.g-deep{background:radial-gradient(45% 60% at 95% 10%,rgba(64,190,255,.45),transparent 65%),radial-gradient(55% 70% at 85% 100%,rgba(46,120,255,.6),transparent 65%),radial-gradient(60% 80% at 100% 55%,rgba(42,98,240,.8),transparent 65%),radial-gradient(45% 60% at 10% 0%,rgba(20,60,170,.6),transparent 70%),#0B2263!important;background-size:120% 120%,120% 120%,120% 120%,120% 120%,auto!important;background-position:100% 0%,100% 100%,100% 50%,0% 0%,0 0;animation:drift2 16s ease-in-out infinite}
+@keyframes drift2{0%,100%{background-position:100% 0%,100% 100%,100% 50%,0% 0%,0 0}50%{background-position:75% 25%,85% 75%,88% 25%,25% 20%,0 0}}
+.hero-blue{background:radial-gradient(130% 95% at 30% 105%,rgba(110,200,255,.65),transparent 72%),radial-gradient(110% 100% at 105% 90%,rgba(64,190,255,.5),transparent 72%),radial-gradient(120% 90% at 85% -5%,rgba(14,42,120,.55),transparent 72%),radial-gradient(100% 110% at -5% 30%,rgba(30,82,214,.75),transparent 72%),#2A62F0!important;background-size:125% 125%,125% 125%,125% 125%,125% 125%,auto!important;background-position:0% 100%,100% 100%,100% 0%,0% 0%,0 0;animation:slide 1.1s .15s cubic-bezier(.7,0,.2,1) both,drift3 18s 1.3s ease-in-out infinite}
+@keyframes drift3{0%,100%{background-position:0% 100%,100% 100%,100% 0%,0% 0%,0 0}50%{background-position:30% 80%,75% 70%,80% 20%,20% 25%,0 0}}
+.blue-glow{background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.16) 48%,rgba(255,255,255,.04) 54%,transparent 62%),radial-gradient(55% 75% at 12% 108%,rgba(120,225,255,.9),transparent 62%),radial-gradient(45% 65% at 98% 92%,rgba(80,170,255,.75),transparent 60%),radial-gradient(40% 60% at 42% 8%,rgba(150,130,255,.5),transparent 65%),radial-gradient(70% 95% at 104% -12%,rgba(6,20,84,.9),transparent 62%),radial-gradient(60% 90% at -8% 20%,rgba(18,60,190,.85),transparent 65%),#2A62F0!important;background-size:220% 100%,140% 140%,140% 140%,140% 140%,140% 140%,140% 140%,auto!important;background-position:100% 0,0% 100%,100% 100%,50% 0%,100% 0%,0% 0%,0 0;animation:glow4 14s ease-in-out infinite}
+.price-glow{background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.08) 48%,rgba(255,255,255,.02) 54%,transparent 62%),radial-gradient(55% 75% at 12% -8%,rgba(120,225,255,.55),transparent 62%),radial-gradient(45% 65% at 98% 92%,rgba(80,170,255,.4),transparent 60%),radial-gradient(40% 60% at 42% 8%,rgba(150,130,255,.3),transparent 65%),radial-gradient(70% 95% at 104% 112%,rgba(6,20,84,.9),transparent 62%),radial-gradient(60% 90% at -8% 80%,rgba(18,60,190,.85),transparent 65%),#2150CC!important;background-size:220% 100%,140% 140%,140% 140%,140% 140%,140% 140%,140% 140%,auto!important;background-position:100% 0,0% 100%,100% 100%,50% 0%,100% 0%,0% 0%,0 0;animation:glow4 14s ease-in-out infinite}
+@keyframes glow4{0%,100%{background-position:100% 0,0% 100%,100% 100%,50% 0%,100% 0%,0% 0%,0 0}33%{background-position:40% 0,25% 70%,80% 75%,20% 20%,85% 15%,10% 25%,0 0}66%{background-position:0% 0,10% 85%,95% 60%,75% 10%,70% 0%,0% 10%,0 0}}
+.bar-a{background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(255,255,255,.45))!important}
+.bar-b{background:linear-gradient(90deg,#CFE0FF,#FFFFFF 70%)!important}
+.g-text{background:linear-gradient(90deg,#0E2A78,#2A62F0);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin{animation:spin 16s linear infinite}
+.wcard{transition:transform .4s cubic-bezier(.2,.7,.2,1)}.wcard:hover{transform:translateY(-6px)}
+.sr-on .wcard.sr{transition:opacity .9s cubic-bezier(.2,.7,.2,1),translate .9s cubic-bezier(.2,.7,.2,1),transform .4s cubic-bezier(.2,.7,.2,1)}
+.sr-on .wcard.sr.s1{transition-delay:.12s,.12s,0s}.sr-on .wcard.sr.s2{transition-delay:.24s,.24s,0s}.sr-on .wcard.sr.s3{transition-delay:.36s,.36s,0s}
+.wlink svg{transition:transform .3s}.wlink:hover svg{transform:translateX(4px)}
+.hero h1{width:580px;max-width:none}
+.hero-p{width:557px;max-width:none}
+@media (max-width: 960px){
+.hero{padding-bottom:0!important}
+.hero-nav,.hero-right,.hero .chip{display:none!important}
+.hero-left{max-width:none!important}
+.hero h1{width:auto}
+.hero-p{width:auto}
+.hero-facts{right:16px!important;bottom:16px!important;width:120px!important;height:120px!important}
+.hero-blue{top:auto!important;width:100%!important;height:460px}
+.hero-img{left:50%!important;height:440px!important}
+.hero-space{display:block;height:460px}
+.st-list{gap:48px}
+.st-line,.st-fill{left:32px}
+.st-row,.st-row.rev{--y:32px;grid-template-columns:64px 1fr;grid-template-areas:"d t" ". i";column-gap:20px;row-gap:24px;align-items:start}
+.st-row .st-t,.st-row.rev .st-t{justify-self:start;--x:0px}
+.st-row .st-i,.st-row.rev .st-i{--x:0px;height:260px!important}
+}
+.sr-on .sr .a-up,.sr-on .sr .a-left,.sr-on .sr .a-right,.sr-on .sr .a-zoom{opacity:0;filter:blur(10px);transition:opacity 1.5s cubic-bezier(.16,1,.3,1),translate 1.5s cubic-bezier(.16,1,.3,1),scale 1.5s cubic-bezier(.16,1,.3,1),filter 1.5s cubic-bezier(.16,1,.3,1),transform .4s cubic-bezier(.2,.7,.2,1)}
+.sr-on .sr .a-up{translate:0 48px}.sr-on .sr .a-left{translate:-72px 0}.sr-on .sr .a-right{translate:72px 0}.sr-on .sr .a-zoom{translate:0 40px;scale:.92}
+.sr-on .a-up.in,.sr-on .a-left.in,.sr-on .a-right.in,.sr-on .a-zoom.in{opacity:1;filter:blur(0);translate:0 0;scale:1}
+.sr-on .sr .t1{transition-delay:.15s,.15s,.15s,.15s,0s}.sr-on .sr .t2{transition-delay:.32s,.32s,.32s,.32s,0s}.sr-on .sr .t3{transition-delay:.49s,.49s,.49s,.49s,0s}.sr-on .sr .t4{transition-delay:.66s,.66s,.66s,.66s,0s}.sr-on .sr .t5{transition-delay:.83s,.83s,.83s,.83s,0s}.sr-on .sr .t6{transition-delay:1s,1s,1s,1s,0s}
+.sr-on .cards.sr>div{opacity:0;translate:0 40px;transition:opacity 1s cubic-bezier(.16,1,.3,1),translate 1s cubic-bezier(.16,1,.3,1),transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,background-color .45s}
+.sr-on .cards.sr.in>div{opacity:1;translate:0 0}
+.sr-on .cards.sr>div:nth-child(1){transition-delay:.1s,.1s,0s,0s}.sr-on .cards.sr>div:nth-child(2){transition-delay:.22s,.22s,0s,0s}.sr-on .cards.sr>div:nth-child(3){transition-delay:.34s,.34s,0s,0s}.sr-on .cards.sr>div:nth-child(4){transition-delay:.46s,.46s,0s,0s}
+.sr-on .sr .stag>li{opacity:0;translate:-24px 0;transition:opacity .8s cubic-bezier(.16,1,.3,1),translate .8s cubic-bezier(.16,1,.3,1)}
+.sr-on .stag.in>li{opacity:1;translate:0 0}
+.sr-on .sr .stag>li:nth-child(1){transition-delay:.45s}.sr-on .sr .stag>li:nth-child(2){transition-delay:.57s}.sr-on .sr .stag>li:nth-child(3){transition-delay:.69s}.sr-on .sr .stag>li:nth-child(4){transition-delay:.81s}
+.sr-on .sr .kb{scale:1.2;transition:scale 1.8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.sr-on .a-zoom.in .kb{scale:1}
+.sr-on #conversion.sr,.sr-on #pricing.sr,.sr-on #about.sr{translate:0 70px;scale:.92;clip-path:inset(8% 5% 8% 5% round 64px);transition:opacity 1.3s cubic-bezier(.16,1,.3,1),translate 1.4s cubic-bezier(.16,1,.3,1),scale 1.4s cubic-bezier(.16,1,.3,1),clip-path 1.4s cubic-bezier(.16,1,.3,1)}
+.sr-on #conversion.sr.in,.sr-on #pricing.sr.in,.sr-on #about.sr.in{translate:0 0;scale:1;clip-path:inset(0 0 0 0 round 32px)}
+.bento>div:hover .kb{transform:scale(1.06)}
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:280px 280px;grid-template-areas:"a b c d" "e e c f";gap:16px}
+.bento>*{min-width:0;border-radius:28px;overflow:hidden;position:relative;box-sizing:border-box}
+.b-a{grid-area:a}.b-b{grid-area:b}.b-c{grid-area:c}.b-d{grid-area:d}.b-e{grid-area:e}.b-f{grid-area:f}
+.bcase{transition:transform .4s cubic-bezier(.2,.7,.2,1)}.bcase:hover{transform:translateY(-6px)}
+.bcase .barr{transition:transform .3s cubic-bezier(.2,.7,.2,1)}.bcase:hover .barr{transform:translateX(4px)}
+@media (max-width: 960px){.bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;grid-auto-rows:260px;grid-template-areas:"e e" "c a" "c d" "b f"}.b-e{min-height:320px}}
+@media (max-width: 1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width: 640px){.stag{grid-template-columns:1fr!important}.cards{grid-template-columns:1fr!important}.bento{grid-template-columns:1fr;grid-auto-rows:auto;grid-template-areas:"e" "c" "a" "d" "b" "f"}.bento>*{min-height:220px}.b-c{min-height:560px}}
+@keyframes blobdrift{0%,100%{translate:0 0}50%{translate:40px -30px}}
+.glass-blob{animation:blobdrift 12s ease-in-out infinite}.glass-blob.b2{animation-duration:15s;animation-direction:reverse}
+.g-mag{background:radial-gradient(50% 70% at -5% 105%,rgba(222,74,206,.6),transparent 65%),radial-gradient(38% 55% at 55% -5%,rgba(168,86,255,.45),transparent 65%),radial-gradient(45% 60% at 95% 10%,rgba(64,190,255,.45),transparent 65%),radial-gradient(55% 70% at 85% 100%,rgba(46,120,255,.6),transparent 65%),radial-gradient(60% 80% at 100% 55%,rgba(42,98,240,.75),transparent 65%),radial-gradient(45% 60% at 20% 0%,rgba(20,60,170,.6),transparent 70%),#0B2263!important;background-size:130% 130%,130% 130%,120% 120%,120% 120%,120% 120%,120% 120%,auto!important;background-position:0% 100%,50% 0%,100% 0%,100% 100%,100% 50%,0% 0%,0 0;animation:drift6 16s ease-in-out infinite}
+.g-mag2{background:radial-gradient(50% 70% at -5% 105%,rgba(140,96,255,.6),transparent 65%),radial-gradient(38% 55% at 55% -5%,rgba(110,120,255,.45),transparent 65%),radial-gradient(45% 60% at 95% 10%,rgba(64,190,255,.45),transparent 65%),radial-gradient(55% 70% at 85% 100%,rgba(46,120,255,.6),transparent 65%),radial-gradient(60% 80% at 100% 55%,rgba(42,98,240,.75),transparent 65%),radial-gradient(45% 60% at 20% 0%,rgba(20,60,170,.6),transparent 70%),#0B2263!important;background-size:130% 130%,130% 130%,120% 120%,120% 120%,120% 120%,120% 120%,auto!important;background-position:0% 100%,50% 0%,100% 0%,100% 100%,100% 50%,0% 0%,0 0;animation:drift6 16s ease-in-out infinite}
+@keyframes drift6{0%,100%{background-position:0% 100%,50% 0%,100% 0%,100% 100%,100% 50%,0% 0%,0 0}50%{background-position:25% 75%,30% 20%,75% 25%,85% 75%,88% 25%,25% 20%,0 0}}
+.ab-pills>span{background:rgba(255,255,255,.12)!important;border:1px solid rgba(255,255,255,.18)}
+.navp.on{background-color:#FFFFFF}
+.fnav .navp.on{background-color:#E3EBFE}
+.fnav{opacity:0;translate:-50% -24px;pointer-events:none;transition:opacity .35s,translate .45s cubic-bezier(.2,.7,.2,1)}
+.fnav.on{opacity:1;translate:-50% 0;pointer-events:auto}
+@media (max-width: 960px){.fnav-links{display:none!important}}
+.how-rail .on{color:#0B0F1A;transition:color .3s}.how-rail .off{color:#8A93A6;transition:color .3s}
+@media (max-width: 960px){.how-rail{display:none!important}.how-card{padding:28px!important}}
+.faq summary{list-style:none}.faq summary::-webkit-details-marker{display:none}
+.faq details{transition:background-color .2s}.faq details:hover{background-color:#E3EBFE!important}
+.faq .plus{transition:rotate .3s cubic-bezier(.2,.7,.2,1)}.faq details[open] .plus{rotate:45deg}
+@media (max-width: 640px){.pin-cards .cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.pin-cards .cards>div{padding:16px!important;gap:12px!important}.pin-cards .num{display:none}}
+@media (max-width: 960px){#about{padding:48px 28px!important;gap:40px!important}}
+@keyframes vUp{from{opacity:0;translate:0 56px;filter:blur(10px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@keyframes vLeft{from{opacity:0;translate:-80px 0;filter:blur(10px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@keyframes vRight{from{opacity:0;translate:80px 0;filter:blur(10px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@keyframes vZoom{from{opacity:0;translate:0 48px;scale:.9;filter:blur(10px)}to{opacity:1;translate:0 0;scale:1;filter:blur(0)}}
+@keyframes vLi{from{opacity:0;translate:-28px 0}to{opacity:1;translate:0 0}}
+@keyframes vKb{from{scale:1.22}to{scale:1}}
+@keyframes vReveal{from{opacity:0;translate:0 70px;scale:.92;clip-path:inset(8% 5% 8% 5% round 64px)}to{opacity:1;translate:0 0;scale:1;clip-path:inset(0 0 0 0 round 32px)}}
+@supports (display: scroll-linked-reveal-off){
+.sr-on .sr .a-up,.sr-on .sr .a-left,.sr-on .sr .a-right,.sr-on .sr .a-zoom,.sr-on .sr .stag>li{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .45s,background-color .45s!important;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1ms;animation-timeline:view();animation-range:entry 0% cover 20%}
+.sr-on .sr .a-up{animation-name:vUp}.sr-on .sr .a-left{animation-name:vLeft}.sr-on .sr .a-right{animation-name:vRight}.sr-on .sr .a-zoom{animation-name:vZoom}.sr-on .sr .stag>li{animation-name:vLi}
+.sr-on .sr .t2{animation-range:entry 2% cover 21%}.sr-on .sr .t3{animation-range:entry 4% cover 22%}.sr-on .sr .t4{animation-range:entry 6% cover 23%}.sr-on .sr .t5{animation-range:entry 8% cover 24%}.sr-on .sr .t6{animation-range:entry 10% cover 25%}
+.sr-on .sr .a-zoom.blue-glow{animation:glow4 14s ease-in-out infinite,vZoom 1ms linear both;animation-timeline:auto,view();animation-range:normal,entry 8% cover 24%}
+.sr-on #conversion.sr{transition:none;animation:drift6 16s ease-in-out infinite,vReveal 1ms linear both;animation-timeline:auto,view();animation-range:normal,entry 0% cover 30%}
+.sr-on #about.sr{transition:none;animation:drift6 16s ease-in-out infinite,vReveal 1ms linear both;animation-timeline:auto,view();animation-range:normal,entry 0% cover 30%}
+.sr-on #pricing.sr{transition:none;animation:glow4 14s ease-in-out infinite,vReveal 1ms linear both;animation-timeline:auto,view();animation-range:normal,entry 0% cover 30%}
+.sr-on .sr .kb{transition:transform 1.2s cubic-bezier(.16,1,.3,1),filter .8s ease!important;animation:vKb 1ms linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (max-width: 1100px){.pin-cards .cards>div{min-height:260px!important}}
+@media (max-width: 640px){.pin-cards .cards>div{min-height:0!important}}
+.wcard{position:relative;overflow:hidden;isolation:isolate;background:#FFFFFF!important}
+.wcard::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;opacity:0;transition:opacity .6s ease;filter:brightness(.78) saturate(1.1);background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.16) 48%,rgba(255,255,255,.04) 54%,transparent 62%),radial-gradient(55% 75% at 12% 108%,rgba(120,225,255,.9),transparent 62%),radial-gradient(45% 65% at 98% 92%,rgba(80,170,255,.75),transparent 60%),radial-gradient(40% 60% at 42% 8%,rgba(150,130,255,.5),transparent 65%),radial-gradient(70% 95% at 104% -12%,rgba(6,20,84,.9),transparent 62%),radial-gradient(60% 90% at -8% 20%,rgba(18,60,190,.85),transparent 65%),#2A62F0;background-size:220% 100%,140% 140%,140% 140%,140% 140%,140% 140%,140% 140%,auto;background-position:100% 0,0% 100%,100% 100%,50% 0%,100% 0%,0% 0%,0 0;animation:glow4 14s ease-in-out infinite}
+.wcard:hover::before,.wcard:focus-visible::before{opacity:1}
+.wcard *{transition:color .45s ease,background-color .45s ease}
+.wcard:hover,.wcard:hover *,.wcard:focus-visible,.wcard:focus-visible *{color:#FFFFFF!important}
+.wcard:hover [style*="border-radius: 999px"],.wcard:focus-visible [style*="border-radius: 999px"]{background:#FFFFFF!important;color:#0E2A78!important}
+.b-b,.b-c,.b-f{position:relative}
+.bento:has(.b-a:hover) .b-b .kb,.bento:has(.b-a:focus-visible) .b-b .kb,.bento:has(.b-e:hover) .b-c .kb,.bento:has(.b-e:focus-visible) .b-c .kb,.bento:has(.b-d:hover) .b-f .kb,.bento:has(.b-d:focus-visible) .b-f .kb{transform:scale(1.05);filter:brightness(1.05) saturate(1.08)}
+.bento:has(.b-b:hover) .b-a,.bento:has(.b-c:hover) .b-e,.bento:has(.b-f:hover) .b-d{transform:translateY(-6px)}
+.nw{white-space:nowrap}@media (max-width:760px){.nw{white-space:normal}}
+</style>
+<style>@keyframes loPulse{0%,100%{box-shadow:0 0 0 0 rgba(127,224,255,.7)}60%{box-shadow:0 0 0 7px rgba(127,224,255,0)}}.lo-dot{animation:loPulse 1.8s ease-out infinite}</style>
+<style>@keyframes brushIn{0%{clip-path:inset(-40% 100% -40% 0);scale:.96 1}70%{scale:1.03 1}100%{clip-path:inset(-40% -4% -40% 0);scale:1 1}}.brush{transform-origin:left center;animation:brushIn .38s 1.15s cubic-bezier(.8,0,.1,1) both}</style>
+<style>html.to-work #work-s,html.to-work #work-s.sr{translate:none!important;scale:1!important;clip-path:none!important;opacity:1!important;transition:none!important;animation:none!important}</style>
+<script>try{history.scrollRestoration='manual';}catch(e){}var __goWork=false;if(location.hash==='#work'){try{__goWork=sessionStorage.getItem('lsGoWork')==='1';sessionStorage.removeItem('lsGoWork');}catch(e){__goWork=true;}}if(__goWork)document.documentElement.classList.add('to-work');</script>
+<style id="rsp">
+@media (max-width:1100px){.hero{padding-bottom:0!important}.hero-nav,.hero-right,.hero .chip{display:none!important}.hero-left{max-width:none!important}.hero h1{width:auto}.hero-p{width:auto}.hero-facts{right:16px!important;bottom:16px!important;width:120px!important;height:120px!important}.hero-blue{top:auto!important;width:100%!important;height:460px}.hero-img{left:50%!important;height:440px!important}.hero-space{display:block;height:460px}}
+@media (min-width:641px) and (max-width:1100px){.bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto;grid-auto-rows:260px;grid-template-areas:"e e" "c a" "c d" "b f"}.b-e{min-height:320px}}
+@media (max-width:640px){#root{padding:12px!important;gap:12px!important}.hero{padding:20px 22px 0!important}#conversion{padding:36px 20px!important;gap:36px!important}#conversion .calc{padding:22px!important}#conversion .a-right>div:last-child{flex-wrap:wrap!important}#bump{top:14px!important;right:14px!important;font-size:12px!important;padding:5px 9px!important}#pricing{padding:20px 14px!important;gap:24px!important}#pricing [data-sr="e11"]{padding:24px 20px 26px!important}#pricing [data-sr="e11"]>span:nth-child(2)>span:nth-child(2){font-size:68px!important}#pricing .stag{padding-left:0!important}#sample{padding:24px 20px!important}#faq{padding:32px 20px!important}footer{padding:24px!important}}
+</style>
+</head>
+<body>
+<div id="root" style="padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; max-width: 1400px; margin: 0 auto">
+
+<!-- Floating nav -->
+<nav class="fnav" id="fnav" aria-label="Main" style="position: fixed; top: 14px; left: 50%; z-index: 50; width: min(1100px, calc(100% - 32px)); box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 8px 8px 20px; background: rgba(255,255,255,.75); -webkit-backdrop-filter: blur(18px) saturate(160%); backdrop-filter: blur(18px) saturate(160%); border: 1px solid rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 12px 30px rgba(14,42,120,.12)">
+<a href="#top" aria-label="Back to top" style="display: block; text-decoration: none"><img src="img/logo.svg" alt="Landspire" style="height: 30px; width: auto; display: block"></a>
+<span class="fnav-links" style="display: flex; gap: 4px">
+<a href="#work" class="navp" data-nav="work" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 600">Our work</a>
+<a href="#how" class="navp" data-nav="how" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 600">How it works</a>
+<a href="#pricing" class="navp" data-nav="pricing" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 600">Pricing</a>
+<a href="#faq" class="navp" data-nav="faq" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 16px; font-size: 14px; font-weight: 600">FAQ</a>
+</span>
+<a href="#book-call" class="btn" style="display: inline-flex; align-items: center; background: #2A62F0; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 10px 20px; font-size: 14px; font-weight: 600; min-height: 44px; box-sizing: border-box">Book a 15-min call</a>
+</nav>
+
+
+<!-- Hero -->
+<section id="top" class="hero" style="position: relative; background: #FFFFFF; border-radius: 32px; overflow: hidden; min-height: clamp(600px, calc(100svh - 40px), 940px); padding: 24px 40px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+
+<div class="hero-blue" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 42%; background: #2A62F0; border-radius: 32px; overflow: hidden">
+</div>
+
+<img class="hero-img" src="img/hero-dentist.webp" alt="Smiling dentist in blue scrubs holding dental tools" style="position: absolute; bottom: 0; left: 58%; height: min(90%, 760px); width: auto; translate: -50% 0; z-index: 1; display: block">
+
+<!-- Top bar -->
+<div class="reveal" style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+<img src="img/logo.svg" alt="Landspire" style="height: 40px; width: auto; display: block">
+<nav class="hero-nav" aria-label="Sections" style="display: flex; gap: 6px; background: #EEF2F9; border-radius: 999px; padding: 5px; margin-right: auto; margin-left: 32px">
+<a href="#work" class="navp" data-nav="work" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 18px; font-size: 14px; font-weight: 600">Our work</a>
+<a href="#how" class="navp" data-nav="how" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 18px; font-size: 14px; font-weight: 600">How it works</a>
+<a href="#pricing" class="navp" data-nav="pricing" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 18px; font-size: 14px; font-weight: 600">Pricing</a>
+<a href="#faq" class="navp" data-nav="faq" style="color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 10px 18px; font-size: 14px; font-weight: 600">FAQ</a>
+</nav>
+<a href="#book-call" class="btn btnw" style="display: inline-flex; align-items: center; gap: 12px; background: #FFFFFF; color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 6px 6px 6px 22px; font-size: 15px; font-weight: 600; min-height: 48px; box-sizing: border-box">Book a 15-min call
+<span style="width: 36px; height: 36px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+</div>
+
+<!-- Left column -->
+<div class="hero-left" style="position: relative; z-index: 2; max-width: 500px; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h1 class="reveal d1" style="margin: 0; font-size: clamp(42px, 4.3vw, 62px); line-height: 1; letter-spacing: -0.04em; font-weight: 300; color: #5A6275">Your ads bring the clicks. <span class="fade d3" style="font-weight: 700; color: #0B0F1A">Your landing page should bring the patients.</span></h1>
+<p class="reveal d2 hero-p" style="margin: 0; font-size: 18px; line-height: 27px; color: #5A6275">We create high-end landing pages for dental and healthcare practices, focused on <span style="font-weight: 600">turning ad clicks into booked&nbsp;patients.</span><span style="display: block; margin-top: 16px; font-weight: 600">Tailored design. <span style="position: relative; display: inline-block; white-space: nowrap"><span style="position: relative; z-index: 1">Built for conversion.</span><svg class="brush" aria-hidden="true" viewBox="88 106 912 46" preserveAspectRatio="none" style="position: absolute; z-index: 0; left: -11px; bottom: -4px; width: calc(100% + 20px); height: 14px; overflow: visible; rotate: 3deg"><path fill="#2a62f0" d="M89.4,147.98c150.81-17.81,302.5-23.86,454.19-27.4,123.26-4.25,274.86-8.63,397.96-11.98,0,0,56.86-1.43,56.86-1.43l.09,2s-56.76,3.67-56.76,3.67c-122.85,7.69-274.32,16.92-397.43,23.73-113.54,7.27-227.1,14.17-340.92,14.37-37.94.25-75.89.22-113.9-.96,0,0-.09-2-.09-2h0Z"/></svg></span></span></p>
+<div class="reveal d3" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<a href="#sample" class="btn" style="display: inline-flex; align-items: center; gap: 14px; background: #2A62F0; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 8px 8px 8px 28px; font-size: 17px; font-weight: 600; min-height: 56px; box-sizing: border-box">Get a free sample
+<span style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+</div>
+</div>
+</div>
+
+<!-- Right text on blue -->
+<div class="hero-right reveal d3" style="position: absolute; z-index: 2; top: 120px; right: 48px; max-width: 280px; color: #FFFFFF; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 28px; line-height: 1.08; font-weight: 600; letter-spacing: -0.03em">Premium design, measured in ROI.</span>
+<span style="font-size: 15px; line-height: 22px">One treatment, a seasonal offer or your whole practice. <span style="font-weight: 600">You run the ads. We make them pay&nbsp;off.</span></span>
+</div>
+
+<!-- Hero facts -->
+<div class="hero-facts reveal d4" style="position: absolute; z-index: 3; right: 40px; bottom: 40px; width: 160px; height: 160px">
+<svg class="spin" role="img" aria-label="High-end design, built to convert" viewBox="0 0 160 160" width="100%" height="100%" style="display: block">
+<defs><path id="heroRing" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs>
+<text fill="#FFFFFF" font-size="13" font-weight="700" letter-spacing="2" font-family="Manrope, sans-serif"><textPath href="#heroRing" textLength="386" lengthAdjust="spacing">HIGH-END DESIGN • BUILT TO CONVERT •</textPath></text>
+</svg>
+<a href="#work" id="goWork" class="btn btnw" aria-label="See our sample work" style="position: absolute; inset: 0; margin: auto; width: 64px; height: 64px; border-radius: 999px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none; overflow: hidden"><svg class="arr" id="dropArr" aria-hidden="true" width="24" height="24" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 12L6 7.5l3 3L14.5 5"/><path d="M10.5 5h4v4"/></svg></a>
+</div>
+
+<div class="hero-space" aria-hidden="true"></div>
+</section>
+
+<!-- Why conversion matters -->
+<section id="conversion" data-sr="conv" class="sr g-mag2" style="position: relative; overflow: hidden; background: #0E2A78; color: #FFFFFF; border-radius: 32px; padding: 64px 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div data-sr="e1" class="calc a-left" style="position: relative; flex: 1 1 440px; min-width: 0; background: #2A62F0; border-radius: 28px; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap">
+<label for="clicks" style="max-width: 250px; font-size: 18px; line-height: 25px; font-weight: 600">How many people click your ads each month?</label>
+<span style="display: flex; align-items: baseline; gap: 8px"><span style="font-size: 52px; line-height: 1; font-weight: 700; letter-spacing: -0.04em; font-variant-numeric: tabular-nums"><span id="clicksFmt">500</span></span><span style="font-size: 15px; font-weight: 600">clicks</span></span>
+</div>
+<input id="clicks" class="rng" type="range" min="100" max="3000" step="50" value="500" style="--p: 13.79%">
+<div aria-hidden="true" style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-top: -4px"><span>100</span><span>3,000</span></div>
+</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<div style="flex: 1 1 160px; background: rgba(255,255,255,.14); border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 14px; font-weight: 600">If 3 in 100 call</span>
+<span style="font-size: 52px; line-height: 1; font-weight: 700; letter-spacing: -0.04em; font-variant-numeric: tabular-nums"><span id="shownA">15</span></span>
+<span style="font-size: 14px">calls a month</span>
+<span aria-hidden="true" style="display: block; margin-top: 14px; height: 8px; border-radius: 999px; background: rgba(255,255,255,.16); overflow: hidden"><span class="bar" style="display: block; height: 100%; border-radius: 999px; background: rgba(255,255,255,.6); width: 18.6%" id="barA"></span></span>
+</div>
+<div style="position: relative; flex: 1 1 160px; background: #FFFFFF; color: #0E2A78; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
+<span id="bump" style="position: absolute; top: 18px; right: 18px; background: #2A62F0; color: #FFFFFF; border-radius: 999px; padding: 6px 12px; font-size: 14px; line-height: 1; font-weight: 700">2× calls</span>
+<span style="font-size: 14px; font-weight: 600">If 6 in 100 call</span>
+<span class="g-text" style="font-size: 52px; line-height: 1; font-weight: 700; letter-spacing: -0.04em; font-variant-numeric: tabular-nums"><span id="shownB">30</span></span>
+<span style="font-size: 14px">calls a month</span>
+<span aria-hidden="true" style="display: block; margin-top: 14px; height: 8px; border-radius: 999px; background: #E3EBFE; overflow: hidden"><span class="bar" style="display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7FA3FF, #2A62F0); width: 37.2%" id="barB"></span></span>
+</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 22px"><span style="font-weight: 700">Same ads, same budget, <span id="diff">15</span> more calls.</span> Just an example: every practice is different.</p>
+</div>
+<div data-sr="e2" class="a-right t2" style="position: relative; flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 300; color: #A9BFFF"><span class="nw">Don't spend more on ads.</span><br><span style="font-weight: 700; color: #FFFFFF">Get more from them.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 26px; color: #C9D8FF">Two practices can spend the same on Google Ads and get very different results. The ad gets people to your page; what happens next depends on how quickly they find the answer they came for and how easy it is to call.</p>
+<p style="margin: 0; font-size: 17px; line-height: 26px; color: #C9D8FF">That share of visitors who call or book is your conversion rate. Improving it, what's called conversion rate optimization (CRO), is the fastest way to lower your cost per new patient and raise the ROI of every dollar you already spend. It's what every one of our pages is built for. <span style="color: #FFFFFF; font-weight: 600">Try it with your own numbers.</span></p>
+<div style="display: flex; flex-wrap: nowrap; align-items: center; gap: 18px; margin-top: 6px">
+<span style="flex: 0 1 auto; min-width: 0; max-width: 225px; font-size: 17px; line-height: 24px; font-weight: 600; color: #FFFFFF">Want to know what your page is costing you?</span>
+<a href="#book-call" class="btn btnw" style="flex: none; display: inline-flex; align-items: center; gap: 12px; background: #FFFFFF; color: #0B0F1A; text-decoration: none; border-radius: 999px; padding: 6px 24px 6px 6px; font-size: 17px; font-weight: 600; min-height: 56px; box-sizing: border-box"><span style="width: 42px; height: 42px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>Book a free 15-min call</a>
+</div>
+</div>
+</section>
+
+<!-- Sample work -->
+<section id="work-s" data-sr="work" class="sr" style="position: relative; padding: 72px 0 40px; display: flex; flex-direction: column; gap: 36px">
+<span id="work" aria-hidden="true" style="position: absolute; top: -36px; left: 0; width: 1px; height: 1px; pointer-events: none"></span>
+<div data-sr="e3" class="a-up" style="padding: 0 16px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap">
+<h2 style="margin: 0; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 300; color: #5A6275">High-end design, <span style="font-weight: 650; color: #0B0F1A">built to convert.</span></h2>
+<p style="margin: 0; max-width: 360px; font-size: 16px; line-height: 24px; color: #5A6275"><span style="font-weight: 650; color: #0B0F1A">No templates. No generic AI look.</span><br>Premium pages, tailored to your practice and made to bring in patients.</p>
+</div>
+<div class="bento">
+
+<a href="https://claude.ai/artifact/1K5C68jTtWNV2Njx2pb1R3" target="_top" data-sr="e4" class="b-a bcase wcard a-zoom t1" aria-label="View the Lark and Linen Aesthetics sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 28px 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+<span style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 17px; font-weight: 600; color: #5A6275">Botox &amp; skin</span><span style="font-size: 12px; font-weight: 700; color: #FFFFFF; background: #2A62F0; border-radius: 999px; padding: 6px 10px">Live sample</span></span>
+<span style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: clamp(28px, 2.6vw, 40px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Lark &amp; Linen Aesthetics</span><span style="font-size: 15px; line-height: 21px; color: #5A6275">Med spa page built around a new-client Botox offer.</span><span style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 650; color: #2A62F0">View live sample<svg class="barr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span>
+</a>
+
+<div data-sr="e5" class="b-b a-zoom t2" style="background: #DDE3EE"><img class="kb" src="img/bento-light.jpg" alt="Woman with clear, glowing skin smiling softly" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block"></div>
+
+<div data-sr="e6" class="b-c a-zoom t3" style="background: #DDE3EE"><img class="kb" src="img/bento-talk.jpg" alt="Smiling woman holding out a clear aligner" style="width: 100%; height: 100%; object-fit: cover; object-position: 36% 40%; display: block"></div>
+
+<a href="https://claude.ai/artifact/FHaLwgbGge35PunvdzTPiG" target="_top" data-sr="e7" class="b-d bcase wcard a-zoom t4" aria-label="View the Alder and Pine Dental sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+<span style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 17px; font-weight: 600; color: #5A6275">Dental implants</span><span style="font-size: 12px; font-weight: 700; color: #FFFFFF; background: #2A62F0; border-radius: 999px; padding: 6px 10px">Live sample</span></span>
+<span style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: clamp(28px, 2.6vw, 40px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Alder &amp; Pine Dental</span><span style="font-size: 15px; line-height: 21px; color: #5A6275">Call button always in view, and the cost question answered before patients ask.</span><span style="margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 650; color: #2A62F0">View live sample<svg class="barr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span>
+</a>
+
+<a href="https://claude.ai/artifact/K5YtC1UMwFDCpFpAFxjVuH" target="_top" data-sr="e8" class="b-e bcase wcard a-zoom t5" aria-label="View the Brightline Orthodontics sample" style="background: #FFFFFF; color: #0B0F1A; text-decoration: none; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+<span style="position: relative; display: flex; justify-content: space-between; align-items: center; gap: 12px"><span style="font-size: 17px; font-weight: 600; color: #5A6275">Invisalign</span><span style="font-size: 12px; font-weight: 700; color: #FFFFFF; background: #2A62F0; border-radius: 999px; padding: 6px 10px">Live sample</span></span>
+<span style="position: relative; display: flex; flex-direction: column; gap: 10px"><span style="font-size: clamp(34px, 3.6vw, 54px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Brightline Orthodontics</span><span style="font-size: 16px; line-height: 24px; color: #5A6275">Seasonal offer page built around year-end benefits and a clear all-in price.</span><span style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 650; color: #2A62F0">View live sample<svg class="barr" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></span>
+</a>
+
+<div data-sr="e9" class="b-f a-zoom t6" style="background: #DDE3EE"><img class="kb" src="img/bento-model.jpg" alt="Smiling older man hugged by his adult daughter on a sofa" style="width: 100%; height: 100%; object-fit: cover; object-position: 64% 40%; display: block"></div>
+
+</div>
+</section>
+
+<!-- What's included -->
+<section id="how" data-sr="included" class="sr" style="background: transparent; padding: 56px 16px 96px; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<h2 data-sr="e10" class="a-up" style="margin: 0 0 56px; text-align: center; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 300; color: #5A6275">How it works. <span style="font-weight: 650; color: #0B0F1A">Three steps to a page that converts.</span></h2>
+<div data-pin="how" style="position: relative; height: 2800px">
+<div style="position: sticky; top: 80px; height: 560px">
+<ol style="list-style: none; margin: 0; padding: 0; position: absolute; inset: 0">
+<li class="how-card" style="position: absolute; inset: 0; margin: auto; width: min(720px, 100%); height: fit-content; box-sizing: border-box; background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.6); -webkit-backdrop-filter: blur(24px) saturate(150%); backdrop-filter: blur(24px) saturate(150%); border-radius: 32px; padding: 52px 48px; box-shadow: 0 24px 60px rgba(14,42,120,.06), inset 0 1px 0 rgba(255,255,255,.7); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; opacity: 1.000; translate: 0 -0.0px; scale: 1.000; filter: blur(0.0px); pointer-events: auto; will-change: opacity, translate, filter" data-hw="0">
+<span style="display: flex; justify-content: center; align-items: center; gap: 24px"><span style="flex: none; width: 96px; height: 96px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 24px 60px rgba(42,98,240,.45), 0 0 0 14px rgba(42,98,240,.08)"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></span></span>
+<span style="display: flex; flex-direction: column; gap: 12px"><span style="font-size: clamp(28px, 3vw, 40px); line-height: 1.05; font-weight: 650; letter-spacing: -0.03em">Send us your page</span><span style="max-width: 540px; font-size: 19px; line-height: 29px; color: #5A6275">Share the page your Google Ads point to, or book a 15-minute call and walk us through it.</span></span>
+</li>
+<li class="how-card" style="position: absolute; inset: 0; margin: auto; width: min(720px, 100%); height: fit-content; box-sizing: border-box; background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.6); -webkit-backdrop-filter: blur(24px) saturate(150%); backdrop-filter: blur(24px) saturate(150%); border-radius: 32px; padding: 52px 48px; box-shadow: 0 24px 60px rgba(14,42,120,.06), inset 0 1px 0 rgba(255,255,255,.7); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; opacity: 0.000; translate: 0 190.0px; scale: 0.922; filter: blur(10.0px); pointer-events: none; will-change: opacity, translate, filter" data-hw="1">
+<span style="display: flex; justify-content: center; align-items: center; gap: 24px"><span style="flex: none; width: 96px; height: 96px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 24px 60px rgba(42,98,240,.45), 0 0 0 14px rgba(42,98,240,.08)"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+<span style="display: flex; flex-direction: column; gap: 12px"><span style="font-size: clamp(28px, 3vw, 40px); line-height: 1.05; font-weight: 650; letter-spacing: -0.03em">See your free sample</span><span style="max-width: 540px; font-size: 19px; line-height: 29px; color: #5A6275">We design a sample of your new landing page, so you can compare it with the one you have now.</span></span>
+</li>
+<li class="how-card" style="position: absolute; inset: 0; margin: auto; width: min(720px, 100%); height: fit-content; box-sizing: border-box; background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.6); -webkit-backdrop-filter: blur(24px) saturate(150%); backdrop-filter: blur(24px) saturate(150%); border-radius: 32px; padding: 52px 48px; box-shadow: 0 24px 60px rgba(14,42,120,.06), inset 0 1px 0 rgba(255,255,255,.7); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; opacity: 0.000; translate: 0 250.0px; scale: 0.922; filter: blur(10.0px); pointer-events: none; will-change: opacity, translate, filter" data-hw="2">
+<span style="display: flex; justify-content: center; align-items: center; gap: 24px"><span style="flex: none; width: 96px; height: 96px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 24px 60px rgba(42,98,240,.45), 0 0 0 14px rgba(42,98,240,.08)"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span></span>
+<span style="display: flex; flex-direction: column; gap: 12px"><span style="font-size: clamp(28px, 3vw, 40px); line-height: 1.05; font-weight: 650; letter-spacing: -0.03em">Go live in 2 business days</span><span style="max-width: 540px; font-size: 19px; line-height: 29px; color: #5A6275">Approve it and we build it, host it and set up tracking. Two months of changes included.</span></span>
+</li>
+<li class="pin-cards" style="position: absolute; inset: 0; margin: auto; width: 100%; height: fit-content; display: flex; flex-direction: column; gap: 32px; opacity: 0.000; translate: 0 310.0px; scale: 0.922; filter: blur(10.0px); pointer-events: none; will-change: opacity, translate, filter" data-hw="3">
+<h3 style="margin: 0; text-align: center; font-size: clamp(28px, 3vw, 40px); line-height: 1.05; font-weight: 650; letter-spacing: -0.03em">Every page includes:</h3>
+<div class="cards" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<div style="background: #2A62F0; color: #FFFFFF; border-radius: 20px; padding: 28px 26px 32px; min-height: 340px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; box-shadow: 0 24px 50px rgba(42,98,240,.35), 0 0 0 10px rgba(42,98,240,.06)">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px"><span class="num" style="font-size: 72px; line-height: 0.9; font-weight: 300; letter-spacing: -0.04em; -webkit-text-stroke: 1.5px rgba(255,255,255,.6)">01</span><span style="flex: none; width: 52px; height: 52px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg></span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 19px; font-weight: 650; letter-spacing: -0.01em">Matches your ad</span><span style="font-size: 15px; line-height: 22px">The same message the patient clicked on, with one clear next step: call or book.</span></div>
+</div>
+<div style="background: #2A62F0; color: #FFFFFF; border-radius: 20px; padding: 28px 26px 32px; min-height: 340px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; box-shadow: 0 24px 50px rgba(42,98,240,.35), 0 0 0 10px rgba(42,98,240,.06)">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px"><span class="num" style="font-size: 72px; line-height: 0.9; font-weight: 300; letter-spacing: -0.04em; -webkit-text-stroke: 1.5px rgba(255,255,255,.6)">02</span><span style="flex: none; width: 52px; height: 52px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></svg></span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 19px; font-weight: 650; letter-spacing: -0.01em">High-end, 100% custom design</span><span style="font-size: 15px; line-height: 22px">Tailored to your practice. No templates, no generic AI look, with copy written from your services and reviews.</span></div>
+</div>
+<div style="background: #2A62F0; color: #FFFFFF; border-radius: 20px; padding: 28px 26px 32px; min-height: 340px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; box-shadow: 0 24px 50px rgba(42,98,240,.35), 0 0 0 10px rgba(42,98,240,.06)">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px"><span class="num" style="font-size: 72px; line-height: 0.9; font-weight: 300; letter-spacing: -0.04em; -webkit-text-stroke: 1.5px rgba(255,255,255,.6)">03</span><span style="flex: none; width: 52px; height: 52px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg></span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 19px; font-weight: 650; letter-spacing: -0.01em">Built on CRO</span><span style="font-size: 15px; line-height: 22px">Mobile first, fast and hosted for you, with every section placed to move patients toward the call.</span></div>
+</div>
+<div style="background: #2A62F0; color: #FFFFFF; border-radius: 20px; padding: 28px 26px 32px; min-height: 340px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; box-shadow: 0 24px 50px rgba(42,98,240,.35), 0 0 0 10px rgba(42,98,240,.06)">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px"><span class="num" style="font-size: 72px; line-height: 0.9; font-weight: 300; letter-spacing: -0.04em; -webkit-text-stroke: 1.5px rgba(255,255,255,.6)">04</span><span style="flex: none; width: 52px; height: 52px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 16v-4M11 16V7M16 16v-6"/><path d="M19 4l-4 3"/></svg></span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 19px; font-weight: 650; letter-spacing: -0.01em">Tracking for Google Ads</span><span style="font-size: 15px; line-height: 22px">Calls and form requests measured, so you see your cost per new patient and the real ROI of each campaign.</span></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</section>
+
+<!-- Pricing + free sample -->
+<section id="pricing" data-sr="pricing" class="sr price-glow" style="position: relative; overflow: hidden; background: #2A62F0; border-radius: 32px; padding: 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch">
+<div style="position: relative; flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 28px; color: #FFFFFF">
+<div data-sr="e11" class="a-up t1" style="align-self: flex-start; width: 100%; max-width: 480px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px; padding: 32px 40px 36px; background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.3); border-radius: 28px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: inset 0 1px 0 rgba(255,255,255,.3)">
+<span style="display: flex; flex-wrap: wrap; gap: 8px"><span style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.75); -webkit-backdrop-filter: blur(12px) saturate(160%); backdrop-filter: blur(12px) saturate(160%); color: #0E2A78; border-radius: 999px; padding: 7px 13px; font-size: 14px; font-weight: 700">One-time payment</span></span>
+<span style="display: flex; align-items: flex-start; gap: 6px"><span style="flex: none; width: clamp(44px, 3.8vw, 56px); height: clamp(44px, 3.8vw, 56px); margin: 6px 8px 0 0; border-radius: 999px; background: #2A62F0; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: clamp(24px, 2.2vw, 32px); line-height: 1; font-weight: 700">$</span><span style="font-size: clamp(80px, 8vw, 120px); line-height: 0.85; font-weight: 800; letter-spacing: -0.06em">850</span><span style="align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 10px; margin: 0 0 6px 8px"><span class="float" style="display: inline-flex; align-items: center; white-space: nowrap; background: #FFFFFF; color: #2A62F0; border-radius: 999px; padding: 7px 12px; font-size: 13px; line-height: 1; font-weight: 700; letter-spacing: 0; box-shadow: 0 8px 18px rgba(4,16,60,.18)">Limited offer</span><span style="font-size: clamp(16px, 1.4vw, 20px); line-height: 1; font-weight: 700; letter-spacing: 0.02em; color: rgba(255,255,255,.8)">USD</span></span></span>
+<span style="align-self: stretch; display: flex; align-items: center; gap: 16px; font-size: 20px; font-weight: 650; letter-spacing: -0.01em"><span aria-hidden="true" style="flex: 1"></span>per landing page</span>
+<span style="align-self: flex-end; margin-top: -12px; font-size: 14px; line-height: 20px; font-weight: 500; color: rgba(255,255,255,.8); text-align: right">Full ROI from a single new patient.</span>
+<span style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.25); font-size: 15px; font-weight: 600">
+<span style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M12 3l2.4 5 5.6.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.6-.8z"/></svg>High-end custom design.</span>
+<span style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></svg>No templates, no generic AI look.</span>
+<span style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Conversion rate optimized (CRO).</span>
+</span>
+</div>
+<ul data-sr="e12" class="stag" style="list-style: none; margin: 0; padding: 0 0 0 8px; display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); justify-content: start; gap: 16px 28px; font-size: 16px; line-height: 22px; color: #FFFFFF">
+<li style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M9 15.5l2 2 4-4"/></svg></span>Live in 2 business days</li>
+<li style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v5h-5"/></svg></span>2 months of changes included</li>
+<li style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 16v-4M11 16V7M16 16v-6"/><path d="M19 4l-4 3"/></svg></span>Hosting and Google Ads tracking set up</li>
+<li style="display: flex; align-items: center; gap: 12px"><span aria-hidden="true" style="flex: none; width: 34px; height: 34px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>Optional care plan from $99/mo after 2 months</li>
+</ul>
+</div>
+<form id="sample" data-sr="e13" class="form a-right t3" aria-label="Request a free sample" style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; border-radius: 24px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 30px; line-height: 1.1; letter-spacing: -0.025em; font-weight: 650">See your new page, free.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 24px; color: #5A6275">Send us the page your ads point to. We'll design a sample version for your practice, free, so you can compare.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Your name<input type="text" placeholder="Dr. Jane Smith" style="font: inherit; font-weight: 400; font-size: 16px; border: 1px solid #DDE3EE; background: #EEF2F9; border-radius: 12px; padding: 12px 14px; min-height: 46px; box-sizing: border-box"></label>
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Practice<input type="text" placeholder="Practice name" style="font: inherit; font-weight: 400; font-size: 16px; border: 1px solid #DDE3EE; background: #EEF2F9; border-radius: 12px; padding: 12px 14px; min-height: 46px; box-sizing: border-box"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Page your ads point to<input type="url" placeholder="https://yourpractice.com/your-service" style="font: inherit; font-weight: 400; font-size: 16px; border: 1px solid #DDE3EE; background: #EEF2F9; border-radius: 12px; padding: 12px 14px; min-height: 46px; box-sizing: border-box"></label>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Email<input type="email" placeholder="you@yourpractice.com" style="font: inherit; font-weight: 400; font-size: 16px; border: 1px solid #DDE3EE; background: #EEF2F9; border-radius: 12px; padding: 12px 14px; min-height: 46px; box-sizing: border-box"></label>
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600"><span>Style inspiration <span style="font-weight: 500; color: #8A93A6">(optional)</span></span><input type="url" placeholder="Link to a site you like" style="font: inherit; font-weight: 400; font-size: 16px; border: 1px solid #DDE3EE; background: #EEF2F9; border-radius: 12px; padding: 12px 14px; min-height: 46px; box-sizing: border-box"></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px">
+<button type="submit" class="btn" style="display: inline-flex; align-items: center; gap: 14px; border: none; cursor: pointer; background: #2A62F0; color: #FFFFFF; border-radius: 999px; padding: 8px 8px 8px 28px; font: inherit; font-size: 17px; font-weight: 600; min-height: 56px">Get a free sample
+<span style="width: 44px; height: 44px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button>
+<a href="#book-call" class="btn btnw" style="display: inline-flex; align-items: center; gap: 12px; background: #FFFFFF; color: #0B0F1A; text-decoration: none; border: 1.5px solid #DDE3EE; border-radius: 999px; padding: 6px 24px 6px 6px; font-size: 17px; font-weight: 600; min-height: 56px; box-sizing: border-box"><span style="width: 42px; height: 42px; border-radius: 999px; background: #E3EBFE; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="2" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>Book a 15-min call</a>
+</div>
+</form>
+</section>
+
+<!-- About -->
+<section id="about" data-sr="about" class="sr g-mag" style="position: relative; overflow: hidden; background: #0E2A78; color: #FFFFFF; border-radius: 32px; padding: 88px 104px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 48px 96px">
+<div data-sr="e14" class="a-left" role="img" aria-label="Photo placeholder" style="flex: 0 0 auto; width: clamp(220px, 26vw, 340px); aspect-ratio: 1; margin: 0 auto; border-radius: 999px; background: #2A62F0; box-shadow: 0 0 0 12px rgba(255,255,255,.06); box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #FFFFFF"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><span style="font-size: 14px; font-weight: 600">Your photo</span></div>
+<div data-sr="e15" class="a-right t2" style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<h2 style="margin: 0; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 300; color: #A9BFFF">Who <span style="font-weight: 700; color: #FFFFFF">we are.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 28px; color: #C9D8FF">We're a boutique design studio based in Mexico, building landing pages for dental and healthcare practices in the US. We pair high-end visual design with conversion rate optimization, so your page looks premium and earns its keep. You work directly with the person who designs and builds your page, no account managers in between.</p>
+<div data-sr="e16" class="ab-pills a-up t3" style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="display: inline-flex; align-items: center; gap: 10px; background: #EEF2F9; border-radius: 999px; padding: 8px 16px 8px 8px; font-size: 15px; font-weight: 600"><span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Same time zone as US Central</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; background: #EEF2F9; border-radius: 999px; padding: 8px 16px 8px 8px; font-size: 15px; font-weight: 600"><span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></span>English and Spanish</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; background: #EEF2F9; border-radius: 999px; padding: 8px 16px 8px 8px; font-size: 15px; font-weight: 600"><span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 999px; background: #2A62F0; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>10+ years in design</span>
+</div>
+<span style="display: flex; flex-direction: column; gap: 4px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.18)"><span style="font-size: 17px; color: #C9D8FF"><span style="font-weight: 650; color: #FFFFFF">Edgar</span> · Founder, Landspire</span><span style="font-size: 15px; line-height: 22px; color: #C9D8FF">Visual designer with 10+ years of experience, the last 5 focused on CRO and high-converting web design.</span></span>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" data-sr="faq" class="sr" style="background: #FFFFFF; border-radius: 32px; padding: 56px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div data-sr="e17" class="a-up" style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 300; color: #5A6275">Questions? <span style="font-weight: 650; color: #0B0F1A">We have answers.</span></h2>
+<p style="margin: 0; font-size: 16px; line-height: 24px; color: #5A6275">Still not sure? Book a quick call and ask us anything.</p>
+<a href="#book-call" class="btn" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; background: #2A62F0; color: #FFFFFF; text-decoration: none; border-radius: 999px; padding: 6px 24px 6px 6px; font-size: 17px; font-weight: 600; min-height: 56px; box-sizing: border-box; margin-top: 8px"><span style="width: 42px; height: 42px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2A62F0" stroke-width="2" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>Book a 15-min call</a>
+</div>
+<div data-sr="e18" class="faq a-up t2" style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<details style="background: #EEF2F9; border-radius: 20px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 18px; font-weight: 650; letter-spacing: -0.01em">Do I need to change my current website?<span class="plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="2.2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></span></summary><p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 24px; color: #5A6275">No. Your landing page lives on its own link and your ads point to it. Your current site stays exactly as it is.</p></details>
+<details style="background: #EEF2F9; border-radius: 20px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 18px; font-weight: 650; letter-spacing: -0.01em">Do you only work with dentists?<span class="plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="2.2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></span></summary><p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 24px; color: #5A6275">No. We build pages for dental, medical and other healthcare practices that run Google Ads.</p></details>
+<details style="background: #EEF2F9; border-radius: 20px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 18px; font-weight: 650; letter-spacing: -0.01em">Who writes the copy?<span class="plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="2.2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></span></summary><p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 24px; color: #5A6275">We do, based on your services, your offer and your reviews. You approve everything before it goes live.</p></details>
+<details style="background: #EEF2F9; border-radius: 20px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 18px; font-weight: 650; letter-spacing: -0.01em">Will it work with my Google Ads?<span class="plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="2.2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></span></summary><p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 24px; color: #5A6275">Yes. You point your ad to the new page, and we set up call and form tracking so you can see what your clicks turn into.</p></details>
+<details style="background: #EEF2F9; border-radius: 20px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 18px; font-weight: 650; letter-spacing: -0.01em">How does a better page improve my ROI?<span class="plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="2.2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></span></summary><p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 24px; color: #5A6275">Your ad spend stays the same, but more of those clicks turn into calls and bookings. That lowers what you pay for each new patient and raises the return on every campaign. That's what CRO is about: getting more from the traffic you already pay for.</p></details>
+<details style="background: #EEF2F9; border-radius: 20px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 18px; font-weight: 650; letter-spacing: -0.01em">What about patient privacy and HIPAA?<span class="plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="2.2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></span></summary><p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 24px; color: #5A6275">Our forms only ask for basic contact details, never medical information. If your practice needs a HIPAA-compliant setup, we can connect the page to the secure form or booking tool you already use.</p></details>
+<details style="background: #EEF2F9; border-radius: 20px; padding: 0 24px"><summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; font-size: 18px; font-weight: 650; letter-spacing: -0.01em">What happens after the two months of changes?<span class="plus" aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2A62F0" stroke-width="2.2" stroke-linecap="round"><path d="M8 3v10M3 8h10"/></svg></span></summary><p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 24px; color: #5A6275">Your page stays live. For ongoing updates after that, there's an optional care plan from $99/mo.</p></details>
+</div>
+</section>
+
+<!-- Footer -->
+<footer data-sr="footer" class="sr" style="background: #0B0F1A; border-radius: 32px; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap">
+<span style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap"><img src="img/logo-white.svg" alt="Landspire" style="height: 36px; width: auto; display: block"></span>
+<span style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap"><a href="#book-call" style="color: #FFFFFF; font-size: 15px; font-weight: 650; text-decoration: none">Book a 15-min call</a><a href="mailto:hello@yourdomain.com" style="color: #F2F5FB; font-size: 15px; font-weight: 500; text-decoration: none">hello@[your domain]</a></span>
+</footer>
+
+</div>
+<script>
+var root=document.getElementById('root');
+if('IntersectionObserver' in window){root.classList.add('sr-on');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:0});
+document.querySelectorAll('[data-sr]').forEach(function(el){io.observe(el);});}
+else{document.querySelectorAll('[data-sr]').forEach(function(el){el.classList.add('in');});}
+
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function scrollToId(id){var el=document.getElementById(id);if(!el)return;var se=document.scrollingElement||document.documentElement;var start=se.scrollTop;var target=Math.max(0,el.getBoundingClientRect().top+start-90);if(reduce){se.scrollTop=target;return;}var d=750,t0=performance.now();function ease(k){return k<.5?16*k*k*k*k*k:1-Math.pow(-2*k+2,5)/2;}function step(t){var k=Math.min(1,(t-t0)/d);se.scrollTop=start+(target-start)*ease(k);if(k<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(!id||!document.getElementById(id))return;e.preventDefault();scrollToId(id);});
+var dropArr=document.getElementById('dropArr'),dropN=0;document.getElementById('goWork').addEventListener('click',function(){dropN++;dropArr.classList.remove('dropA','dropB');void dropArr.offsetWidth;dropArr.classList.add(dropN%2?'dropA':'dropB');});
+var fnav=document.getElementById('fnav'),navs=document.querySelectorAll('[data-nav]'),cards=document.querySelectorAll('[data-hw]'),pin=document.querySelector('[data-pin]');
+function hw(i,hp){var t=hp*3-i,a=Math.abs(t),f=Math.max(0,Math.min(1,(a-.3)/.22)),o=1-f;return{o:o.toFixed(3),y:(-t*60-Math.sign(t)*f*130).toFixed(1)+'px',s:(.94+.06*o-Math.min(a,.3)*.06).toFixed(3),b:((1-o)*10).toFixed(1)+'px',pe:o>.5?'auto':'none'};}
+var q=0;function upd(){q=0;var act='';['work','how','pricing','faq'].forEach(function(id){var el=document.getElementById(id==='work'?'work-s':id);if(el){var r=el.getBoundingClientRect();if(r.top<=160&&r.bottom>160)act=id;}});
+navs.forEach(function(n){n.classList.toggle('on',n.getAttribute('data-nav')===act);});
+var y=window.scrollY||document.documentElement.scrollTop;fnav.classList.toggle('on',y>500);
+if(pin){var r=pin.getBoundingClientRect();var p=Math.max(0,Math.min(1,(80-r.top)/Math.max(1,r.height-560)));cards.forEach(function(c){var v=hw(+c.getAttribute('data-hw'),p);c.style.opacity=v.o;c.style.translate='0 '+v.y;c.style.scale=v.s;c.style.filter='blur('+v.b+')';c.style.pointerEvents=v.pe;});}}
+function onS(){if(!q)q=requestAnimationFrame(upd);}window.addEventListener('scroll',onS,{passive:true});window.addEventListener('resize',onS);upd();
+var rng=document.getElementById('clicks'),sa=15,sb=30,raf=0,bumpN=0,bump=document.getElementById('bump');
+function fmt(n){return n.toLocaleString('en-US');}
+function setC(){var c=+rng.value,la=Math.round(c*.03),lb=Math.round(c*.06);document.getElementById('clicksFmt').textContent=fmt(c);rng.style.setProperty('--p',((c-100)/2900*100).toFixed(2)+'%');var wb=30+70*(c-100)/2900;document.getElementById('barB').style.width=wb.toFixed(1)+'%';document.getElementById('barA').style.width=(wb/2).toFixed(1)+'%';document.getElementById('diff').textContent=fmt(lb-la);
+bumpN++;bump.classList.remove('bumpA','bumpB');void bump.offsetWidth;bump.classList.add(bumpN%2?'bumpA':'bumpB');
+var fa=sa,fb=sb;if(raf)cancelAnimationFrame(raf);if(reduce){sa=la;sb=lb;draw();return;}var t0=performance.now();(function st(t){var k=Math.min(1,(t-t0)/450),e=1-Math.pow(1-k,3);sa=Math.round(fa+(la-fa)*e);sb=Math.round(fb+(lb-fb)*e);draw();if(k<1)raf=requestAnimationFrame(st);})(t0);}
+function draw(){document.getElementById('shownA').textContent=fmt(sa);document.getElementById('shownB').textContent=fmt(sb);}
+rng.addEventListener('input',setC);
+document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();});});
+</script>
+<script>
+(function(){document.querySelectorAll('.bcase').forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.setItem('lsGoWork','1');}catch(e){}});});
+if(location.hash==='#work'&&!__goWork){var top0=function(){window.scrollTo({top:0,left:0,behavior:'instant'});};top0();addEventListener('DOMContentLoaded',top0);addEventListener('load',function(){top0();setTimeout(top0,50);});return;}
+if(!__goWork)return;try{history.scrollRestoration='manual';}catch(e){}
+function go(){var el=document.getElementById('work-s');if(!el)return;var y=0,e=el;while(e){y+=e.offsetTop;e=e.offsetParent;}window.scrollTo({top:Math.max(0,y-36),left:0,behavior:'instant'});}
+var t0=Date.now(),user=false;['wheel','touchstart','keydown','pointerdown'].forEach(function(ev){addEventListener(ev,function(){user=true;},{passive:true,capture:true});});
+function tick(){if(user||Date.now()-t0>6000)return;go();requestAnimationFrame(tick);}
+addEventListener('load',function(){if(!user){go();setTimeout(go,300);}setTimeout(function(){try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}},400);});
+if(document.readyState==='loading')addEventListener('DOMContentLoaded',tick);else tick();})();
+</script>
+</body>
+</html>
