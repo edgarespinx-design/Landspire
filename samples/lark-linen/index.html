@@ -227,14 +227,28 @@ transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preser
 <script>
 (function(){try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
 if(location.hash)return;
-var user=false,t0=Date.now(),LOCK=5000;
-function top(){if(!user&&(window.scrollY||document.documentElement.scrollTop)>0){window.scrollTo({top:0,left:0,behavior:'instant'});}}
-['wheel','touchstart','keydown','pointerdown','mousedown'].forEach(function(ev){window.addEventListener(ev,function(){user=true;},{passive:true,capture:true});});
-window.addEventListener('scroll',function(){if(Date.now()-t0<LOCK)top();},{passive:true});
-top();window.addEventListener('DOMContentLoaded',top);window.addEventListener('load',function(){top();setTimeout(top,150);setTimeout(top,600);});
-window.addEventListener('pageshow',function(e){if(e.persisted){t0=Date.now();user=false;top();}});})();
+var user=false;
+['wheel','touchstart','keydown','pointerdown'].forEach(function(ev){window.addEventListener(ev,function(){user=true;},{passive:true,capture:true});});
+function top(){if(!user&&(window.scrollY||document.documentElement.scrollTop)>0)window.scrollTo(0,0);}
+top();window.addEventListener('load',top);
+window.addEventListener('pageshow',function(e){if(e.persisted){user=false;top();}});})();
 </script>
-<style id="rsp">@media (hover:none){.gm-sheen{display:none}}.gm-card::after{background:url(img/grain.png) repeat!important;background-size:160px 160px!important;mix-blend-mode:normal!important;opacity:.06!important}@media (max-width:560px){header.rvf{padding:20px 24px!important}header.rvf nav .lk{display:none}header.rvf .btn-w{white-space:nowrap}}</style>
+<style id="rsp">@media (hover:none){.gm-sheen{display:none}}.gm-card::after{background:url(img/grain.png) repeat!important;background-size:160px 160px!important;mix-blend-mode:normal!important;opacity:.06!important}@media (max-width:560px){header.rvf{padding:20px 24px!important}header.rvf nav .lk{display:none}header.rvf .btn-w{white-space:nowrap}}
+@media (max-width:760px){
+.ls-bar{position:fixed!important;left:0;right:0;bottom:0!important;margin:0!important;padding:0 12px calc(12px + env(safe-area-inset-bottom))!important;flex-wrap:nowrap!important;gap:8px!important}
+.ls-bar>div{padding:4px!important;gap:0!important}
+.ls-bar>div>span{display:none!important}
+.ls-bar .ls-btn{font-size:14px!important;min-height:44px!important}
+.ls-bar .ls-back{font-size:0!important;padding:6px!important;gap:0!important}
+.ls-bar .ls-cta{white-space:nowrap}
+.ft{padding-bottom:72px!important}
+.callbar{padding:10px 16px!important;gap:8px!important}
+.callbar *{white-space:nowrap}
+.callbar .serif{font-size:18px!important}
+.callbar a{min-height:38px!important;padding:6px 12px!important;font-size:13px!important}
+.tq-s .tq-q,.tq-s .tq-by,.tq-s.on .tq-q,.tq-s.on .tq-by{filter:none!important}
+.sr-on .apz img{scale:1!important;transition:none!important}
+}</style>
 </head>
 <body>
 <div class="ll" id="root" style="overflow-x: clip; background: #FFFFFF; color: #3B302A; font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased">
