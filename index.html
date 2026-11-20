@@ -236,6 +236,12 @@ footer a{transition:color .2s}footer a:hover{text-decoration:underline!important
 #conversion .calc>p{font-size:14px!important;line-height:20px!important}
 #conversion.g-mag2{background:radial-gradient(80% 40% at 0% 100%,rgba(140,96,255,.6),transparent 70%),radial-gradient(80% 40% at 100% 0%,rgba(64,190,255,.5),transparent 70%),linear-gradient(45deg,#2A62F0 0%,#123A9E 30%,#0B2263 50%,#123A9E 70%,#2A62F0 100%)!important;background-size:130% 130%,130% 130%,100% 100%!important;background-position:0% 100%,100% 0%,0 0;animation:driftM 16s ease-in-out infinite}
 .how-card>span:last-child{max-width:260px}
+#how>h2{margin-bottom:0!important}
+#how [data-pin]{height:auto!important}
+#how [data-pin]>div{position:static!important;height:auto!important}
+#how [data-pin] ol{position:static!important;display:flex;flex-direction:column;gap:16px}
+#how [data-hw]{position:relative!important;inset:auto!important;margin:0!important;width:100%!important;opacity:1!important;translate:none!important;scale:1!important;filter:none!important;pointer-events:auto!important}
+#how [data-hw]+[data-hw].pin-cards{margin-top:40px!important}
 .pin-cards{gap:20px!important}
 .pin-cards .cards{grid-template-columns:1fr!important;gap:10px!important}
 .pin-cards .cards>div{flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:16px!important;padding:24px 20px!important;min-height:124px!important}
@@ -243,7 +249,7 @@ footer a{transition:color .2s}footer a:hover{text-decoration:underline!important
 .pin-cards .cards>div>div:last-child{gap:4px!important}
 .pin-cards .cards>div>div:last-child>span:first-child{font-size:17px!important}
 .pin-cards .cards>div>div:last-child>span:last-child{font-size:14px!important;line-height:20px!important}
-.how-card{min-height:520px!important;justify-content:center!important;gap:36px!important;padding:40px 28px!important}
+.how-card{min-height:0!important;justify-content:center!important;gap:24px!important;padding:40px 28px!important}
 #about.g-mag{background:radial-gradient(80% 40% at 0% 100%,rgba(222,74,206,.55),transparent 70%),radial-gradient(80% 40% at 100% 0%,rgba(64,190,255,.5),transparent 70%),linear-gradient(45deg,#2A62F0 0%,#123A9E 30%,#0B2263 50%,#123A9E 70%,#2A62F0 100%)!important;background-size:130% 130%,130% 130%,100% 100%!important;background-position:0% 100%,100% 0%,0 0;animation:driftM 16s ease-in-out infinite}
 @keyframes driftM{0%,100%{background-position:0% 100%,100% 0%,0 0}50%{background-position:20% 80%,80% 20%,0 0}}
 }
